@@ -31,3 +31,5 @@ const db = getFirestore()
 //CRUD
 export const dameDocumentos = (ref)=>getDocs(collection(db,ref))
 export const onDameMascotas = (ref,callback)=>onSnapshot(collection(db,ref),callback)
+export const addMascotas = (ref,mascota)=>addDoc(collection(db,ref),mascota)
+export const deleteMascota = (ref, id) => deleteDoc(doc(db,ref,id))
